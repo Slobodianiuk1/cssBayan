@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: #3d034a;
+}
+
+.container {
+    margin: 1.25rem auto 0;
+    max-width: 50rem;
+    padding: 1.25rem;
+}
+
+#bayan li {
+    list-style: none;
+    width: 100%;
+    margin-bottom: 0.625rem;
+    border-radius: 0.25rem;
+    background: #fbebfe;
+    overflow: hidden;
+}
+
+label {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0.625rem;
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: #8f07ac;
+
+    transition: all .2s ease-in-out;
+}
+
+li label i {
+
+    justify-content: end;
+    font-size: 1.652rem;
+    transform: rotate(45deg);
+    transition: all .2s ease-in-out;
+}
+
+input[type="radio"]:checked + label > i {
+    transform: rotate(0deg);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label span {
+    flex: 80%;
+}
+
+label img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    max-height: 0;
+    transition: all .5s ease-in-out;
+
+}
+
+input[type="radio"]:checked ~ label {
+    color: #3d034a;
+}
+
+input[type="radio"]:checked ~ label > img {
+    margin-top: 1.25rem;
+    max-height: 100vh;
+}
+
+@media only screen and (min-width: 820px) {
+    #bayan li label {
+        font-size: 1.5rem;
+    }
+
+    li label i {
+        font-size: 2.125rem;
+    }
+}
+
+@media only screen and (min-width: 1180px) {
+    #bayan li label {
+        font-size: 1.8rem;
+    }
+
+    li label i {
+        font-size: 2.5rem;
+    }
+}
+
+@media (hover: hover) {
+    #bayan label i {
+        opacity: 0;
+        transition: all .2s ease-in-out;
+    }
+
+    #bayan li label {
+        cursor: pointer;
+    }
+
+    #bayan:hover > li > label {
+        color: #3d034a;
+    }
+
+    #bayan:hover > li > label > i {
+        opacity: 1;
+    }
+
+    #bayan label:hover > img {
+        max-height: 100vh;
+    }
+
+    #bayan label:hover > i {
+        transform: rotate(0deg);
+    }
+
+    #bayan label:hover img {
+        margin-top: 1.25rem;
+    }
+}
+
+#bayan li label:active {
+    color: #8f07ac;
+}
+
+#bayan li label:active img {
+    opacity: 0.6;
+}
